@@ -86,26 +86,26 @@ footer {
     background-color: #ffffff; 
     }
  
-#boris1hero {
-    background-image: url(boris1.jpg);
-    height: 300px;
+#borishero {
+    background-image: url(borisSelfie.jpg);
+    height: 400px;
     width: 300;
     background-repeat: no-repeat;
-    background-size: 75%;
+    background-size: 50%;
       }
 
 #yurthero {
     background-image: url(yurt.jpg);
-    height: 300px;
+    height: 500px;
     background-repeat: no-repeat;
     background-size: 100%;
     }
 
 #maxhero {
-    background-image: url(max.jpg);
-    height: 250px;
+    background-image: url(max.png);
+    height: 3000px;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,24 +132,18 @@ td {padding: 0.5em; border: 2px solid #3399CC;text-align: left; }
 th {padding: 0.5em; border: 2px solid #3399CC; text-align: center; }
 tr:nth-of-type(odd){background-color: #f5fafc;}
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px; 
-}
 .column {
-    flex: 50%;
-    padding: 0 4px; 
-}
-.column img {
-    margin-top:8px;
-    vertical-align: middle;
-}
-
-.gric-container {
-    display:grid;
-    grid-template-columns: 100px auto 80px auto;
-}
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
 form {
     display: grid;
@@ -163,5 +157,3 @@ form {
 }
 
 input[type = "submit"] {grid-column: 2/3; width: 10em; margin-left:0;}
-
-//test
