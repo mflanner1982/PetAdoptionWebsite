@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>
+  Fake Adoption Site
+</title>
+<link rel="stylesheet" href="Adoption.css">
+<script src="Adoption.js" type="text/javascript"></script>
+
+</head>
+<body>
+  <div id="box">
+    <div id="wrapper">
+      <div id="hero">
+        <div id="container">
+            <h1> 
+              Fake Adoption Site - choose a dog
+            </h1>
+        </div>
+
+        <nav>
+          <ul>
+          <li> <a href="index.html">Home</a>   <br> </li>
+          <li> <a href="Dog2Choose.html">Available Dogs</a>  <br> </li>
+          <li> <a href="Cats2Choose.html">Available Cats</a>  <br> </li>
+          <li> <a href= "Donations.html">Donations</a>  <br> </li>
+          <li> <a href="ContactUs.html">Contact Us</a>  </li>
+          </ul>
+       </nav> 
+<!-- ***************** filters ***************-->
+<!-- Control buttons -->
+<div id="myBtnContainer">
+  <br>
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('ViewCatGender')">Filter by Gender</button>
+  <button class="btn" onclick="filterSelection('ViewCatAge')">Filter by Age</button>
+  <button class="btn" onclick="filterSelection('ViewCatBreed')">Filter by Breed</button>
+</div>
+
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+  <div class="filterDiv ViewCats">All Cats</div>
+  <div class="filterDiv ViewCatGender">Male Cats</div>
+  <div class="filterDiv ViewCatGender">Female Cats</div>
+  <div class="filterDiv ViewCatAge">Kitty Cats</div>
+  <div class="filterDiv ViewCatAge">Senior Cats</div>
+  <div class="filterDiv ViewCatBreed">Siamese</div>
+  <div class="filterDiv ViewCatBreed">Tabby</div>
+  <div class="filterDiv ViewCatBreed">Gizmos</div>
+</div>
+
+<!-- ***************** filters ***************-->
+       <h2>Click on a Dog to Learn More about him/her</h2>
+       <p>The image below is a link. Try to click on it.</p>
+
+
+       <div class="row">
+        <div class="column">
+          <h2>
+            Grey Cat
+         </p>
+         </h2>
+          <a href="Boris.html"><img src="CatGrey.jpeg" alt="marker.gif" style="width:100%">
+        </div>
+        <div class="column">
+          <h2>
+            Orange Cat
+         </p>
+         </h2>
+          <a href="Lucy.html"><img src="CatOrange.jpeg" alt="image.gif" style="width:100%">
+        </div>
+        <div class="column">
+            <h2>
+              Fat Cat
+           </p>
+           </h2>
+            <a href="Lucy.html"><img src="CatFat.jpg" alt="image.gif" style="width:100%">
+          </div>
+<main> 
+  <h2>
+    Fake Adoption Site - choose a cat
+  </h2>
+  
+  <h3>
+      Well, it's yurt season, so  . . . 
+     </p>
+  </h3>
+</main>
+
+<footer>
+
+    Copyright &copy; Fake Adoption Site <br>
+    Maureen Flannery<br>
+    <span style="color: #002171"> 
+    Maureen.Flannery@tri-c.edu
+    </span> 
+</footer>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+<!--  <ul id="myUL">
+        <li><a href="#">Boris</a></li>
+        <li><a href="#">Lucy</a></li>
+      
+        <li><a href="#">Daisy</a></li>
+        <li><a href="#">Honey</a></li>
+      
+        <li><a href="#">Harley</a></li>
+        <li><a href="#">Dolly</a></li>
+        
+        <li><a href="#">Max</a></li>
+        <li><a href="#">Birdie</a></li>
+      </ul>-->
