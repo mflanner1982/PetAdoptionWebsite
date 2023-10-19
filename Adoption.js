@@ -11,6 +11,28 @@ function hello()
     console.log("hello");
 }
 
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Button is working"; 
+}
+
+const DogArray = [
+  {Name: "Boris", Gender: "Male", Age: "Senior", Breed: "Laborador"}, 
+  {Name: "Lucy", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"}, 
+  {Name: "Daisy", Gender: "Female", Age: "Senior", Breed: "Golden Retriver"}, 
+  {Name: "Honey", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"}, 
+  {Name: "Harley", Gender: "Male", Age: "Senior", Breed: "Laborador"}, 
+  {Name: "Dolly", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"},
+  {Name: "Max", Gender: "Male", Age: "Senior", Breed: "Golden Retriever"}, 
+  {Name: "Birdie", Gender: "Female", Age: "Senior", Breed: "Pregnant Hog"} 
+]
+const MaleDogs = DogArray.filter(MaleDogFunction);
+
+  function MaleDogFunction(DogArray)  // not sure what goes here
+  {
+    return DogArray; //where gender = male
+
+  }
+
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
@@ -22,6 +44,7 @@ function filterSelection(c) {
     if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
 }
+
 
 // Show filtered elements
 function w3AddClass(element, name) {
