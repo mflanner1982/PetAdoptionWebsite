@@ -16,21 +16,22 @@ function myFunction() {
 }
 
 const DogArray = [
-  {Name: "Boris", Gender: "Male", Age: "Senior", Breed: "Laborador"}, 
-  {Name: "Lucy", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"}, 
-  {Name: "Daisy", Gender: "Female", Age: "Senior", Breed: "Golden Retriver"}, 
-  {Name: "Honey", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"}, 
-  {Name: "Harley", Gender: "Male", Age: "Senior", Breed: "Laborador"}, 
-  {Name: "Dolly", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"},
-  {Name: "Max", Gender: "Male", Age: "Senior", Breed: "Golden Retriever"}, 
-  {Name: "Birdie", Gender: "Female", Age: "Senior", Breed: "Pregnant Hog"} 
+  {PetName: "Boris", Gender: "Male", Age: "Senior", Breed: "Laborador"}, 
+  {PetName: "Lucy", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"}, 
+  {PetName: "Daisy", Gender: "Female", Age: "Senior", Breed: "Golden Retriver"}, 
+  {PetName: "Honey", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"}, 
+  {PetName: "Harley", Gender: "Male", Age: "Senior", Breed: "Laborador"}, 
+  {PetName: "Dolly", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"},
+  {PetName: "Max", Gender: "Male", Age: "Senior", Breed: "Golden Retriever"}, 
+  {PetName: "Birdie", Gender: "Female", Age: "Senior", Breed: "Pregnant Hog"} 
 ]
-const MaleDogs = DogArray.filter(MaleDogFunction);
 
-  function MaleDogFunction(DogArray)  // not sure what goes here
+const MaleDogs = DogArray.forEach(MaleDogFunction);
+
+function MaleDogFunction(DogArray)  // not sure what goes here
   {
-    return DogArray; //where gender = male
-
+    //return Gender = "Male"; //where gender = male
+    console.log(Gender = "Male");
   }
 
 filterSelection("all")
