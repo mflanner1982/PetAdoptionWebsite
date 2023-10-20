@@ -32,7 +32,7 @@ const MaleDogs = DogArray.where('Gender', [Male]);
 
 function MaleDogFunction(DogArray)  // not sure what goes here
  {
-    return Gender = "Male";
+    //return Gender = "Male";
   }
 
 filterSelection("all")
