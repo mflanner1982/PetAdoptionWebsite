@@ -15,10 +15,10 @@
       <div id="hero">
         <div id="container">
             <h1> 
-              Fake Adoption Site - choose a dog
+              Fake Adoption Site - Available Dogs
             </h1>
         </div>
-
+<!-- ***************** Navigation Bars *************** -->
         <nav>
           <ul>
           <li> <a href="index.html">Home</a>   <br> </li>
@@ -29,46 +29,18 @@
           <li> <a href="Junk.html">Junk Page</a> </li>     
           </ul>
        </nav> 
-<!-- ***************** filters ***************-->
-<!-- Control buttons -->
-<div id="myBtnContainer">
-  <br>
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('ViewDogGender')">Filter by Gender</button>
-  <button class="btn" onclick="filterSelection('ViewDogAge')">Filter by Age</button>
-  <button class="btn" onclick="filterSelection('ViewDogBreed')">Filter by Breed</button>
+ <!----------------- Stack Overflow Help ---------------->
+ <div class='controls'>
+  <br> <br>
+  <button id='allBtn'>Show all</button> | <button id='fBtn'>Show females</button> | <button id='mBtn'>Show males</button>
 </div>
+<br>
+<hr>
+<div id='output'></div>
+<!----------------- Stack Overflow Help ---------------->
 
-<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
-<div class="container">
-  <div class="filterDiv ViewDogs">All Dogs</div>
-  <div class="filterDiv ViewDogGender">Male Dogs</div>
-  <div class="filterDiv ViewDogGender">Female Dogs</div>
-  <div class="filterDiv ViewDogAge">Puppy Dogs</div>
-  <div class="filterDiv ViewDogAge">Senior Dogs</div>
-  <div class="filterDiv ViewDogBreed">Laboradors</div>
-  <div class="filterDiv ViewDogBreed">Golden Retrievers</div>
-  <div class="filterDiv ViewDogBreed">Pregnant Hogs</div>
-</div>
+<!-- ***************** Display of Dogs *************** -->
 
-<!-- ************** Change Message Button **************** -->
-<p id="demo">Connect to JS</p>
-<button type="button" onclick="myFunction()">Change Message</button>
-<!-- ***************************************************** -->
-
-<!-- ***************** Male Dog Button *************** -->
-<p id="Result">Button 1</p>
-<button type="button" onclick="MaleDogFunction(DogArray)">Choose Male Dogs </button>
-<!-- *************************************************-->
-<!-- *************************************************-->
-
-
-<p id="result2">Button 2 </p>
-<button type="button" onclick="search(users)">stackoverflow example</button>
-
-
-<!-- *************************************************-->
-<!-- ***************** filters ***************-->
        <h2>Click on a Dog to Learn More about him/her</h2>
 
        <div class="row">

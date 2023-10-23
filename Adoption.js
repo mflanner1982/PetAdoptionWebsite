@@ -16,100 +16,76 @@ function myFunction() {
 }
 //-- ************************************************ -->
 
-// ***************** Male Dog Button ***************
-const DogArray = [
-  {PetName: "Boris", Gender: "Male", Age: "Senior", Breed: "Laborador"}, 
-  {PetName: "Lucy", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"}, 
-]
+  "use strict";
 
-const Result = DogArray.filter(MaleDogFunction);
-
-function MaleDogFunction(DogArray)  // not sure what goes here
-  {
-    return Gender = "Male"; //where gender = male;
-  }
-// *************************************************-->
- // *************************************************-->
-  var users = [
-  {name: 'Boris', gender: 'Male', Age: 'Senior', Breed: 'Chocolate Laborador'},
-  {name: 'Lucy', gender: 'Female', Age: 'Puppy', Breed: 'Golden Retriever'}];
-
-  var query = {gender: "Male"};
-  var result2 = users.filter(search, query); 
-  var element = document.getElementById('result2');
-
-  function search(user){
-    return Object.keys(this).every((key) => user[key] === this[key]);
-  } 
-
-/*
-function createMarkUp(data){
-  Object.keys(query).forEach(function(key){
-    var p = document.createElement('p');
-    p.appendChild(document.createTextNode(
-    key.toUpperCase() + ': ' + result[0][key]));
-
-    element.appendChild(p);
-  });
+function newEl(tag) {
+  return document.createElement(tag)
 }
-let data = x; 
-createMarkUp(result2);
-*/
- // *************************************************-->
- // *************************************************-->
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+
+function byId(id) {
+  return document.getElementById(id)
+}
+
+window.addEventListener('load', onLoaded, false);
+
+class dogT {
+  constructor(name = null, gender = null, age = null, breed = null, link = null) {
+    this.name = name;
+    this.gender = gender;
+    this.age = age;
+    this.breed = breed;
+    this.link = link;
   }
 }
 
+const dogArray = [
+  
+  new dogT('Boris', 'Male', 'Senior', 'Labrador', 'Boris.html'),
+  new dogT('Lucy', 'Female', 'Puppy', 'Golden Retriever', 'Lucy.html'),
+  new dogT('Daisy', 'Female', 'Senior', 'Golden Retriever', 'Daisy.html'), 
+  new dogT('Honey', 'Female', 'Puppy', 'Golden Retriever', 'Honey.html'), 
+  new dogT('Harley', 'Male', 'Senior', 'Labrador', 'Haryley.html'), 
+  new dogT('Dolly', 'Female', 'Puppy', 'Golden Retriever', 'Dolly.html'),
+  new dogT('Max', 'Male', 'Senior', 'Golden Retriever', 'Max.html'), 
+  new dogT('Birdie', 'Female', 'Senior', 'Pregnant Hog', 'Birdie.html') 
+];
 
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
+function onLoaded(evt) {
+  byId('allBtn').addEventListener('click', showAll, false);
+  byId('fBtn').addEventListener('click', showFemale, false);
+  byId('mBtn').addEventListener('click', showMale, false);
+}
+function showAll(evt) {
+  showDogArray(dogArray);
+}
+
+function showMale(evt) {
+  let inputArray = dogArray.filter((curDog) => curDog.gender == 'Male');
+  showDogArray(inputArray);
+}
+
+function showFemale(evt) {
+  let inputArray = dogArray.filter((curDog) => curDog.gender == 'Female');
+  showDogArray(inputArray);
+}
+
+function showDogArray(inputArray) {
+  let tgt = byId('output');
+  tgt.innerHTML = '';
+
+  inputArray.forEach(
+    curDog => {
+      let container = newEl('div');
+
+      let keys = Object.keys(curDog);
+      keys.forEach(
+        curKey => {
+          let div = newEl('div');
+          div.textContent = curDog[curKey];
+          container.appendChild(div);
+        }
+      );
+      tgt.appendChild(container);
     }
-  }
+  )
 }
-
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-/*
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}*/
-/*
-  {PetName: "Daisy", Gender: "Female", Age: "Senior", Breed: "Golden Retriver"}, 
-  {PetName: "Honey", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"}, 
-  {PetName: "Harley", Gender: "Male", Age: "Senior", Breed: "Laborador"}, 
-  {PetName: "Dolly", Gender: "Female", Age: "Puppy", Breed: "Golden Retriever"},
-  {PetName: "Max", Gender: "Male", Age: "Senior", Breed: "Golden Retriever"}, 
-  {PetName: "Birdie", Gender: "Female", Age: "Senior", Breed: "Pregnant Hog"} 
-  */
